@@ -1,0 +1,10 @@
+<mat-spinner *ngIf="isLoading; else result"></mat-spinner>
+
+<ng-template #result>
+    <mat-card>
+        <button mat-icon-button (click)="back()">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+       Votre panier contient un total de {{fullPrice}} €, nous vous faisons un prix de {{finalPrice}} €
+    </mat-card>
+</ng-template>
